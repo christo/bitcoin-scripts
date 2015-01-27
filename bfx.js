@@ -1,4 +1,5 @@
-require('request-json').newClient('https://api.bitfinex.com/v1/')
-  .get('pubticker/btcusd', function(err, res, body) {
+var request = require('request-json')
+var client = request.newClient('https://api.bitfinex.com/v1/')
+client.get('pubticker/btcusd', function(err, res, body) {
     return console.log("$" + body.last_price);
-  });
+});
