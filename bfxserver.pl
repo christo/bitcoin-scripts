@@ -11,13 +11,9 @@ use strict;
     sub handle_request {
         my $self = shift;
         my $cgi = shift;
-
         my $price = `node bfx.js`;
-
-        print "HTTP/1.0 200 OK\r\n";
-        print $cgi->header, $price, "so there";
+        print "HTTP/1.0 200 OK\r\n", $cgi->header, $price;
     }
 }
-#my $pid = BfxServer->new(9876)->background();
-my $pid = BfxServer->new(9876)->run();
+my $pid = BfxServer->new(9876)->background();
 print "Use 'kill $pid' to stop server.\n";

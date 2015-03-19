@@ -1,0 +1,9 @@
+{
+  "name": "bitcoin-scripts",
+  "description": "random bits of bitcoin scriptage",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "request-json": "0.5.2"
+  }
+}
